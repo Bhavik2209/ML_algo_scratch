@@ -62,21 +62,3 @@ class DBSCAN:
         return neighbors
     
 
-
-import numpy as np
-
-# two small clusters + one noise point
-X = np.array([
-    [1, 2],
-    [1, 3],
-    [2, 2],
-    [8, 8],
-    [8, 9],
-    [9, 8],
-    [20, 20]   # noise
-])
-
-db = DBSCAN(eps=1.5, min_samples=2)
-db.fit(X)
-
-print(db.labels)
